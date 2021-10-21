@@ -30,7 +30,7 @@ header {
     width: 50%;
 }
 
-.search-container div {
+.search-container form {
     height: 40px;
     width: 80%;
     display: flex;
@@ -47,16 +47,16 @@ header {
     padding-left: 10px;
 }
 
-.search-container div i {
+.search-container form i {
     width: 10%;
 }
 
 header .icon-title {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 25px 0 20px;
     width: 100%;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 header .icon-title h4 {
@@ -92,13 +92,16 @@ header .burger-menu {
     font-size: 18px;
 }
 
-header .banner_container {
+.banner_container {
     width: 100%;
     display: flex;
+    background-color: #ebebeb;
 }
 
-header .banner_image {
-    width: 100%;
+.banner_image {
+    width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;   
 }
 
 /* /////////////// main //////////////// */
@@ -124,12 +127,13 @@ main .principal_section {
     margin: 0 auto;
 }
 
-.article_card figure img {
-    width: 100%;
-}
 
 .article_card {
     margin-bottom: 10px;
+}
+
+.article_card figure img {
+    width: 100%;
 }
 
 .article_card ul {
@@ -169,7 +173,7 @@ main .article_card ul li:last-child {
     left: calc(100% - 65px);
     bottom: calc(100% - 15px);
     background-color: white;
-    transition-duration: 500ms;
+    transition-duration: 700ms;
 }
 .article_card i:hover {
     transform: rotate(-450deg);
@@ -194,7 +198,7 @@ footer section {
 }
 
 footer section h4 {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
     color: #666666;
 }
@@ -202,13 +206,14 @@ footer section h4 {
 footer section i {
     margin: 10px auto;
     color: #1259C3;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 footer section p {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 300;
     color: #666666;
+    margin-top: 10px;
 }
 
 footer .footer-copyrights h4 {
@@ -297,11 +302,18 @@ footer .footer-copyrights h4 {
 
 /* LOGIN LOGIN LOGIN LOGIN  */
 
+.main_login {
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
 .form_login {
     display: flex;
     flex-direction: column;
     width: 70%;
     margin: 40px auto 0;
+    max-width: 430px;
 }
 
 .form_login .login_items {
@@ -321,8 +333,6 @@ footer .footer-copyrights h4 {
     background-color: #0022AA;
     color: white;
 }
-
-
 
 /* LOGIN LOGIN LOGIN LOGIN  */
 
@@ -348,7 +358,7 @@ footer .footer-copyrights h4 {
         justify-content: center;
     }
 
-    .search-container div {
+    .search-container form {
         height: 20px;
     }
 
@@ -416,6 +426,14 @@ footer .footer-copyrights h4 {
         margin: 20px auto;
         text-align: start;
     }    
+
+    footer section {
+        max-width: 350px;
+    }
+
+    .form_login .login_items {
+        max-width: 430px;
+    }
 }
 
 @media (min-width: 520px) {
@@ -433,6 +451,8 @@ footer .footer-copyrights h4 {
         bottom: calc(100% - 13px );
     }
 
+    
+
 }
 
 @media (min-width: 769px) {
@@ -448,7 +468,7 @@ footer .footer-copyrights h4 {
 
     }
 
-    .search-container div {
+    .search-container form {
         justify-content: space-around;
     }
 
@@ -463,4 +483,106 @@ footer .footer-copyrights h4 {
         height: 80%;
         align-self: center;
     }
+
+    .header-nav ul li a,
+    .header-nav ul li i{
+        font-size: 15px;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+        align-items: center;
+    }
+
+    footer section {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        max-width: 240px;
+        height: 180px;
+        justify-content: space-between;
+    }
+
+    footer .footer-copyrights {
+        height: 50px;
+    }
+
+    footer section i {
+        font-size: 25px;
+    }
+
+    footer section h4 {
+        font-size: 16px;
+    }
+
+    footer section p {
+        font-size: 13px;
+    }
+
+    footer section i:hover {
+        color: #eac926;
+        transform: scale(1.3);
+    }
+
+}
+
+@media (min-width: 950px) {
+
+    .main_login {
+        height: 500px
+    }
+
+    .article_card ul li {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .main_logo,
+    .search-container,
+    .icon-title
+     {
+        max-width: 350px;
+    }
+
+    .header-nav {
+        justify-content: center;
+    }
+
+    .header-nav ul {
+        width: 500px;
+    }
+  
+    .principal_section {
+        max-width: 1200px;
+    }
+
+    .article_card ul li {
+        font-size: 17px;
+    }
+
+    .article_card {
+        max-width: 250px;
+    }
+
+    footer section {
+        max-width: 280px;
+    }
+
+    footer section i {
+        font-size: 30px;
+    }
+
+    footer section h4 {
+        font-size: 19px;
+    }
+
+    footer section p {
+        font-size: 16px;
+    }
+
 }
