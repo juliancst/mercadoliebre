@@ -64,7 +64,7 @@ header .icon-title h4 {
 }
 
 .header-nav {
-    /* display: none; */
+    display: none;
 }
 
 .header-nav ul {
@@ -150,8 +150,10 @@ main .principal_section {
 }
 
 main .article_card ul li:last-child {
-    display: none;
+    display: block;
     color: #b0abad;
+    opacity: 0;
+    margin: 5px 0;
 }
 
 .article_card i {
@@ -167,7 +169,12 @@ main .article_card ul li:last-child {
     left: calc(100% - 65px);
     bottom: calc(100% - 15px);
     background-color: white;
+    transition-duration: 500ms;
 }
+.article_card i:hover {
+    transform: rotate(-450deg);
+}
+
 
 .article_card .descuento {
     color: rgb(39, 207, 39);
@@ -208,6 +215,118 @@ footer .footer-copyrights h4 {
     font-size: 13px;
     font-weight: 500;
 }
+
+
+/* FORMULARIO REGISTRO FORMULARIO REGISTRO FORMULARIO REGISTRO  */
+
+    .form-register {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        height: 1000px;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    main h1 {
+        width: fit-content;
+        color: #918f8f;
+        font-size: 25px;
+        font-weight: 300;
+        margin: 0 auto;
+        justify-items: center;
+    }
+
+    .form-register .text-input {
+        height: 40px;
+        border-radius: 8px;
+        border: none;
+        padding: 0 10px;
+        margin: 10px 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .form-register .date-info input {
+        margin-top: 15px;
+        width: 100%;
+        color: #918f8f;
+    }
+
+    .form-register .titles {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+
+    .form-register .items {
+        font-size: 13px;
+        margin-top: 5px;
+        font-weight: 300;
+    }
+
+    .form-register .items input {
+        margin-right: 8px;
+    }
+
+    .form-register #photo {
+        margin: 10px 0;
+    }
+
+    .form-register .button {
+        width: 100%;
+        height: 35px;
+        align-self: center;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: none;
+        font-size: 15px;
+    }
+
+    .form-register .button-submit {
+        background-color: #1259C3;
+        color: white;
+    }
+
+    .form-register .button-reset {
+        background-color: white;
+    }
+
+/* FORMULARIO REGISTRO FORMULARIO REGISTRO FORMULARIO REGISTRO  */
+
+/* LOGIN LOGIN LOGIN LOGIN  */
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 40px auto 0;
+}
+
+.form_login .login_items {
+    height: 35px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 15px;
+}
+
+.form_login .login-button_submit {
+    background-color: white;
+    color: black;
+}
+
+.form_login .login-button_submit:hover {
+    background-color: #0022AA;
+    color: white;
+}
+
+
+
+/* LOGIN LOGIN LOGIN LOGIN  */
+
+
 
 /* MEDIA QUERYS  */
 
@@ -263,14 +382,17 @@ footer .footer-copyrights h4 {
         padding-left: 10px;
     }
 
-    main .article_card ul li:last-child {
-        display: block;
+    main .article_card:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main .article_card:hover ul li:last-child {
         margin-top: 5px;
+        opacity: 1;
     }
 
     main .article_card {
         width: 45%;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
         font-size: 2.4vw;
     }
 
